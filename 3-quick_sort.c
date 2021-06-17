@@ -30,7 +30,7 @@ int pivot = array[end], pIdx = start, i;
 
 for (i = start; i < end; i++)
 {
-if (array[i] <= pivot)
+if (array[i] <= pivot && array[i] != array[pIdx])
 {
 swap(&array[i], &array[pIdx]);
 print_array(array, size);
