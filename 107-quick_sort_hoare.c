@@ -30,16 +30,12 @@ int pivot = array[start], lIdx = start - 1, rIdx = end + 1;
 
 while (1)
 {
-do
-{
+do {
 lIdx++;
-}
-while (array[lIdx] < pivot);
-do
-{
+} while (array[lIdx] < pivot);
+do {
 rIdx--;
-}
-while (array[rIdx] > pivot);
+} while (array[rIdx] > pivot);
 if (lIdx < rIdx)
 {
 swap(&array[lIdx], &array[rIdx]);
@@ -47,7 +43,7 @@ print_array(array, size);
 }
 else
 {
-return rIdx;
+return (rIdx);
 }
 }
 
@@ -58,7 +54,7 @@ return rIdx;
  * @array: array to be sorted
  * @start: first value of the array(int)
  * @end: last value of the array(int)
- * @size; size of the array(size_t)
+ * @size: size of the array(size_t)
  * Return: void
  */
 void quickSort(int *array, int start, int end, size_t size)
@@ -68,13 +64,13 @@ int pIdx;
 if (start < end)
 {
 pIdx = partition_hoare(array, start, end, size);
-quickSort(array, start, pIdx -1, size);
+quickSort(array, start, pIdx - 1, size);
 quickSort(array, pIdx + 1, end, size);
 }
 }
 
 /**
- * quick_sort - utilises hoare's quick sort algorithm
+ * quick_sort_hoare - utilises hoare's quick sort algorithm
  * @array: array to be sorted
  * @size: size of the array
  * Return: void
