@@ -34,8 +34,9 @@ void selection_sort(int *array, size_t size);
 /* quick sort */
 void swap(int *a, int *b);
 int partition_lomuto(int *array, int start, int end, size_t size);
-void quick_sort_lomuto(int *array, int start, int end, size_t size);
+int partition_hoare(int *array, int start, int end, size_t size);
+void quickSort(int *array, int start, int end, size_t size);
 void quick_sort(int *array, size_t size);
-
+void quick_sort_hoare(int *array, size_t size);
 
 #endif
