@@ -16,7 +16,7 @@ tmp = *a;
 }
 
 /**
- * partition_lomuto - partitions an array at a pivot
+ * partition_lomuto - partitions an array using Lomuto's scheme
  * @array: array to be partitioned
  * @start: first value of the array(int)
  * @end: last value of the array(int)
@@ -42,14 +42,14 @@ return pIdx;
 }
 
 /**
- * quick_sort_lomuto - recursively sorts an array
+ * quickSort - recursively sorts an array
  * @array: array to be sorted
  * @start: first value of the array(int)
  * @end: last value of the array(int)
  * @size; size of the array(size_t)
  * Return: void
  */
-void quick_sort_lomuto(int *array, int start, int end, size_t size)
+void quickSort(int *array, int start, int end, size_t size)
 {
 int pIdx;
 
@@ -71,5 +71,5 @@ void quick_sort(int *array, size_t size)
 {
 int start = 0, end = size - 1;
 
-quick_sort_lomuto(array, start, end, size);
+quickSort(array, start, end, size);
 }
