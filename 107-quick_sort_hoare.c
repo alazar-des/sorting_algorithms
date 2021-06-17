@@ -74,7 +74,7 @@ quickSort(array, pIdx + 1, end, size);
 }
 
 /**
- * quick_sort - utilises lomuto's quick sort algorithm
+ * quick_sort - utilises hoare's quick sort algorithm
  * @array: array to be sorted
  * @size: size of the array
  * Return: void
