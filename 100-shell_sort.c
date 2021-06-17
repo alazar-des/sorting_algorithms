@@ -12,6 +12,8 @@ void shell_sort(int *array, size_t size)
 int inner, outer, valueToInsert;
 int interval = 1;
 int elements = (int)size;
+if (!array || !size || size < 2)
+return;
 
 while (interval <= elements/3)
 {
