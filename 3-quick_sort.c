@@ -1,5 +1,11 @@
 #include "sort.h"
 
+/**
+ * swap - swaps two integers
+ * @a: int pointer
+ * @b: int pointer
+ * Return: void
+ */
 void swap(int *a, int *b)
 {
 int tmp;
@@ -8,6 +14,15 @@ tmp = *a;
 *a = *b;
 *b = tmp;
 }
+
+/**
+ * partition_lomuto - partitions an array at a pivot
+ * @array: array to be partitioned
+ * @start: first value of the array(int)
+ * @end: last value of the array(int)
+ * @size: size of array(size_t)
+ * Return: index of the pivot(int)
+ */
 
 int partition_lomuto(int *array, int start, int end, size_t size)
 {
@@ -26,6 +41,14 @@ swap(&array[pIdx], &array[end]);
 return pIdx;
 }
 
+/**
+ * quick_sort_lomuto - recursively sorts an array
+ * @array: array to be sorted
+ * @start: first value of the array(int)
+ * @end: last value of the array(int)
+ * @size; size of the array(size_t)
+ * Return: void
+ */
 void quick_sort_lomuto(int *array, int start, int end, size_t size)
 {
 int pIdx;
@@ -38,6 +61,12 @@ quick_sort_lomuto(array, pIdx + 1, end, size);
 }
 }
 
+/**
+ * quick_sort - utilises lomuto's quick sort algorithm
+ * @array: array to be sorted
+ * @size: size of the array
+ * Return: void
+ */
 void quick_sort(int *array, size_t size)
 {
 int start = 0, end = size - 1;
