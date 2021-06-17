@@ -38,7 +38,7 @@ pIdx++;
 }
 }
 swap(&array[pIdx], &array[end]);
-return pIdx;
+return (pIdx);
 }
 
 /**
@@ -46,7 +46,7 @@ return pIdx;
  * @array: array to be sorted
  * @start: first value of the array(int)
  * @end: last value of the array(int)
- * @size; size of the array(size_t)
+ * @size: size of the array(size_t)
  * Return: void
  */
 void quickSort(int *array, int start, int end, size_t size)
@@ -56,7 +56,7 @@ int pIdx;
 if (start < end)
 {
 pIdx = partition_lomuto(array, start, end, size);
-quick_sort_lomuto(array, start, pIdx -1, size);
+quick_sort_lomuto(array, start, pIdx - 1, size);
 quick_sort_lomuto(array, pIdx + 1, end, size);
 }
 }
