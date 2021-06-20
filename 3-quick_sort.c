@@ -30,14 +30,21 @@ int pivot = array[end], pIdx = start, i;
 
 for (i = start; i < end; i++)
 {
-if (array[i] <= pivot && array[i] != array[pIdx])
+if (array[i] <= pivot)
+{
+if (array[i] != array[pIdx])
 {
 swap(&array[i], &array[pIdx]);
 print_array(array, size);
+}
 pIdx++;
 }
 }
+if (array[end] != array[pIdx])
+{
 swap(&array[pIdx], &array[end]);
+print_array(array, size);
+}
 return (pIdx);
 }
 
@@ -56,8 +63,8 @@ int pIdx;
 if (start < end)
 {
 pIdx = partition_lomuto(array, start, end, size);
-quick_sort_lomuto(array, start, pIdx - 1, size);
-quick_sort_lomuto(array, pIdx + 1, end, size);
+quickSort(array, start, pIdx - 1, size);
+quickSort(array, pIdx + 1, end, size);
 }
 }
 
